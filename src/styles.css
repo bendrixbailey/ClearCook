@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {background-color: #565656;}
+
+.app-toolbar{
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/*
+Color Scheme 1:
+    #D7CEC7
+    #565656
+    #76323F
+    #C09F80
+
+Color Scheme 2:
+    #22223b
+    #4a4e69
+    #9a8c98
+    #c9ada7
+    #f2e9e4
+
+Color Scheme 3:
+    #1B262C
+    #0F4C75
+    #3282B8
+    #BBE1FA
+*/
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

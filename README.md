@@ -1,6 +1,14 @@
 # ClearCook
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+ClearCook is a website that serves as a catalogue of recipes for all types of cooks. The key to this website, is
+there are no ads, and no long winded stories, just straight to the recipes. 
+
+Planned Features: 
+Rating system for recipes
+User created recipes
+Favoriting recipes/personal recipe book
+
 
 ## Development server
 
