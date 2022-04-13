@@ -1,4 +1,8 @@
 .toolbar-button{
-    margin-left: 10px;
-    
+    font-size: smaller;
+}
+
+.title-button{
+    font-size: larger;
+    outline: 1px dotted red;
 }

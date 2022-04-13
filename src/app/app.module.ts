@@ -6,12 +6,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MyrecipesComponent } from './myrecipes/myrecipes.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipesComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    MyrecipesComponent,
+    FavoritesComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
