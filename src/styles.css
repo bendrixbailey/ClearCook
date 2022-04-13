@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html {background-color: #565656;}
 
 .app-toolbar{
@@ -7,6 +7,10 @@ html {background-color: #565656;}
     top: 0;
     z-index: 1000;
     background-color: #c9ada7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /*

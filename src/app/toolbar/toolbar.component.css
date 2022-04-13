@@ -4,5 +4,10 @@
 
 .title-button{
     font-size: larger;
-    outline: 1px dotted red;
+}
+
+.toolbar-left{
+    font-size: smaller;
+    position: absolute;
+    right: 10px;
 }
