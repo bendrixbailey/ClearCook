@@ -1,0 +1,25 @@
+.toolbar-button{
+    font-size: smaller;
+}
+
+.title-button{
+    font-size: larger;
+}
+
+.toolbar-left{
+    font-size: smaller;
+    position: absolute;
+    right: 10px;
+}
+
+.search-div{
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+}
+
+.search-bar{
+    outline: none;
+    border: 0;
+    font-size: small;
+}
