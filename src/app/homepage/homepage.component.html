@@ -1,22 +1,26 @@
-<div>
-    <title>Welcome to ClearCook</title>
+<div class="content">
+    <h1>Welcome to ClearCook</h1>
     <h1>ClearCook is your place for recipes that are free of ads, interruptions, and those long and annoying stories that nobody cares about. You value your time and so do we, so enjoy!</h1>
+    <div class="spacer"></div>
     <mat-divider></mat-divider>
     <h3>Need some ideas? See some randomly picked recipes below!</h3>
-    <div fxLayout = "row wrap" fxLayoutGap="16px grid">
-        <div fxFlex="25%" fxFlex.xs="100%" *ngFor="let recipe of randomRecipes">
-            <mat-card class="recipe-card">
+    
+    <mat-grid-list cols="4" rowHeight="300px">
+        <mat-grid-tile *ngFor="let recipe of randomRecipes">
+            <!-- <mat-card class="recipe-card">
                 <mat-card-header>
                     <mat-card-title>{{recipe.name}}</mat-card-title>
                     <mat-card-subtitle>Total Time:{{recipe.prepTime}} minutes</mat-card-subtitle>
                 </mat-card-header>
-                <img mat-card-image src={{recipe.imageLink}} alt="Photo of "{{recipe.name}}>
+                <img mat-card-image src={{recipe.imageLink}} alt="Photo of recipe">
                 <mat-card-content>
-                    <div *ngFor="let step of recipe.steps">
-                        <p></p>
-                    </div>
+                    "Add chopped onions and garlic to pan with 2 tsp of olive oil. Cook until garlic is fragrant. Then add rice and toast till most kernels are slightly browned.",
+                    "Add chicken stock to rice until rice is fully submerged. Wait for water to cook off. Add more chicken stock and repeat again until rice is cooked. Make sure to stir occasionally so rice doesnt burn.",
+                    "While rice is cooking, cook your chicken breasts in a pan or on the grill until done. Be sure to season the chicken with a little bit of salt and pepper. Then, slice them into strips, or cube them to your liking. ",
+                    "Time it so the rice is just about finished cooking as the last of the chicken stock is cooking off. Then add seasoning, cheese, peas (microwave them so they arent frozen) and stir. When stirred thoroughly, add chopped chicken and stir again, seasoning to taste."
                 </mat-card-content>
-            </mat-card>
-        </div>
-    </div>
+            </mat-card> -->
+            <p>Test Card</p>
+        </mat-grid-tile>
+    </mat-grid-list>
 </div>

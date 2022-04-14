@@ -8,12 +8,10 @@ import { beefStew, chickenRisotto, Recipe } from '../recipe';
 })
 export class HomepageComponent implements OnInit {
 
+  public randomRecipes = [
+    beefStew, chickenRisotto, 6, 8, 10
+  ];
   constructor() { }
-
-  randomRecipes = [
-    beefStew,
-    chickenRisotto
-  ]
 
   ngOnInit(): void {
   }
