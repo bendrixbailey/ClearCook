@@ -1,1 +1,22 @@
-<p>homepage works!</p>
+<div>
+    <title>Welcome to ClearCook</title>
+    <h1>ClearCook is your place for recipes that are free of ads, interruptions, and those long and annoying stories that nobody cares about. You value your time and so do we, so enjoy!</h1>
+    <mat-divider></mat-divider>
+    <h3>Need some ideas? See some randomly picked recipes below!</h3>
+    <div fxLayout = "row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" fxFlex.xs="100%" *ngFor="let recipe of randomRecipes">
+            <mat-card class="recipe-card">
+                <mat-card-header>
+                    <mat-card-title>{{recipe.name}}</mat-card-title>
+                    <mat-card-subtitle>Total Time:{{recipe.prepTime}} minutes</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src={{recipe.imageLink}} alt="Photo of "{{recipe.name}}>
+                <mat-card-content>
+                    <div *ngFor="let step of recipe.steps">
+                        <p></p>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { beefStew, chickenRisotto, Recipe } from '../recipe';
 
 @Component({
   selector: 'app-homepage',
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomepageComponent implements OnInit {
 
   constructor() { }
+
+  randomRecipes = [
+    beefStew,
+    chickenRisotto
+  ]
 
   ngOnInit(): void {
   }

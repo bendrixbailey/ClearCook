@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input'; 
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -32,6 +34,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     MatIconModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatDividerModule,
+    MatCardModule,
     FormsModule,
   ],
   providers: [],
