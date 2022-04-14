@@ -11,6 +11,9 @@ export class HomepageComponent implements OnInit {
   public randomRecipes = [
     beefStew, chickenRisotto, beefStew, chickenRisotto
   ];
+
+  gridColumns = 3;
+
   constructor() { }
 
   ngOnInit(): void {
