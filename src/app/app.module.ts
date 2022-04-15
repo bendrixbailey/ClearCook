@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule} from '@angular/material/grid-list';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -42,6 +43,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     MatCardModule,
     MatListModule,
     MatGridListModule,
+    FlexLayoutModule,
     FormsModule,
   ],
   providers: [],

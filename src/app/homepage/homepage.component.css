@@ -2,7 +2,7 @@
     background-color: #265a94;
     color: white;
     border-radius: 10px;
-    height: 280px;
+    height: fit-content;
 }
 
 .grid-layout-custom{

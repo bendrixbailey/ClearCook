@@ -4,43 +4,29 @@
     <div class="spacer"></div>
     <mat-divider></mat-divider>
     <h3>Need some ideas? See some randomly picked recipes below!</h3>
-    
-    <!-- <mat-grid-list cols="3" rowHeight="300px" class="grid-layout-custom">
-        <mat-grid-tile *ngFor="let recipe of randomRecipes" class="grid-tile-custom">
-            <mat-card class="recipe-card">
-                <mat-card-header>
-                    <mat-card-title>{{recipe.name}}</mat-card-title>
-                    <mat-card-subtitle>Total Time:{{recipe.prepTime}} minutes</mat-card-subtitle>
-                </mat-card-header>
-                <mat-divider></mat-divider>
-                <img mat-card-image class="card-image" src={{recipe.imageLink}} alt="Photo of recipe">
-                <mat-card-content class="card-text">
-                    <p>Just a simple description of this recipe.</p>
-                </mat-card-content>
-            </mat-card>
-        </mat-grid-tile>
-    </mat-grid-list> -->
+
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
-        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let recipe of randomRecipes">
+        <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let recipe of randomRecipes">
             <mat-card class="recipe-card">
                 <mat-card-header>
                     <mat-card-title>{{recipe.name}}</mat-card-title>
-                    <mat-card-subtitle>Total Time:{{recipe.prepTime}} minutes</mat-card-subtitle>
+                    <mat-card-subtitle>Total Time: {{recipe.prepTime}} minutes</mat-card-subtitle>
                 </mat-card-header>
                 <mat-divider></mat-divider>
                 <img mat-card-image class="card-image" src={{recipe.imageLink}} alt="Photo of recipe">
                 <mat-card-content class="card-text">
                     <p>Just a simple description of this recipe.</p>
                 </mat-card-content>
+                <mat-divider></mat-divider>
+                <mat-card-actions>
+                    <button mat-button>Save</button>
+                    <button mat-button>View Recipe</button>
+                </mat-card-actions>
             </mat-card>
         </div>
     </div>
+    <div class="spacer"></div>
     <mat-divider></mat-divider>
     <div class="spacer"></div>
 </div>
 
-<!-- <div fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let recipe of randomRecipes">
-
-    </div>
-</div> -->
