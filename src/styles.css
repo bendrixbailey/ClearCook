@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html {
-    background-color: #5d5c61;
+    background-color: #171717;
 }
 h1{
     color: white;
@@ -10,10 +10,19 @@ h3{
     color:white;
 }
 
-mat-divider{
+.mat-divider{
     width: 100%;
-    color: rgb(192, 192, 192);
-    border-top-width: 2px;
+    border-top-color: #2e2e2e;
+    border-top-width: 3px;
+}
+mat-card-subtitle{
+    color: white;
+}
+.white-text{
+    color: white;
+}
+.grey-text{
+    color: lightgrey;
 }
 
 .spacer{
