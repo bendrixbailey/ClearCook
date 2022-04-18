@@ -12,7 +12,7 @@ export class HomepageComponent implements OnInit {
     beefStew, chickenRisotto, beefStew, chickenRisotto
   ];
 
-  gridColumns = 4;
+  gridColumns = 2;
 
   constructor() { }
 

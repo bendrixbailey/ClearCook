@@ -2,7 +2,6 @@
     background-color: #265a94;
     color: white;
     border-radius: 10px;
-    height: fit-content;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -11,6 +10,25 @@
     width: 100%;
 }
 
+.recipe-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recipe-container-div{
+    display: block;
+}
+
+.recipe-card-list{
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 23%;
+    border-radius: 5px;
+    margin: 0 15px 25px 15px;
+}
 
 .card-divider{
     border-top-color: #21528a;
@@ -20,13 +38,20 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
+    position: relative;
+}
+
+.card-footer{
+    position: absolute;
+    bottom: 0;
 }
 
 
 .card-image{
-    object-fit: fill;
+    object-fit: cover;
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: 400px;
     margin: 0px 0px 0px;
     /* padding: 15px; */
 }
