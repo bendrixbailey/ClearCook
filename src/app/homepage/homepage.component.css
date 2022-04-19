@@ -9,8 +9,7 @@
 .title-text-container{
     position: absolute;
     top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 100%;
     /* background: #171717;
     border-radius: 5px; */
     /* transform: translate(50%, 50%); */
@@ -19,6 +18,7 @@
 .title-text{
     margin: 3%, 0;
     font-size: 100px;
+    text-align: center;
 }
 
 .title-description-text{
@@ -26,6 +26,23 @@
     margin-right: 10%;
     position: absolute;
     bottom: 20%;
+    text-align: center;
+}
+
+.description-text{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.ideas-text{
+    color: white;
+    font-size: 30px;
+    display: inline;
+}
+
+.ideas{
+    text-align: center;
+    display: flex;
 }
 
 .recipe-container{
@@ -66,13 +83,14 @@
 }
 
 .recipe-card-content{
-    padding: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
     position: relative;
 }
 
 .recipe-card-footer{
     /* margin: auto 16px 16px 16px; */
-    padding: 16px;
+    padding: 0 16px 16px 16px;
     display: inline-block;
 }
 
