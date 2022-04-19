@@ -1,16 +1,24 @@
+<div class="title-container">
+    <!-- <img src="http://ladahome.com/wp-content/uploads/2018/08/97-Fancy-Black-and-White-Kitchen-Ideas-13.jpg" alt="Image of modern Kitchen" style="width: 100%;"> -->
+    <img src="https://www.solakitchens.com/wp-content/uploads/2019/08/island-front-landscape-1.jpg" alt="Image of modern Kitchen" style="width: 100%;">
+    <!-- <img src="https://kitchinsider.com/wp-content/uploads/2019/09/Harvey-Jones-Dark-Blue-Shaker-Kitchen-1024x701.jpg" alt="Image of modern Kitchen" style="width: 100%;"> -->
+    <div class="title-text-container">
+        <h1 class="title-text">Welcome to ClearCook</h1>
+    </div>
+    <h2 class="title-description-text">Clearcook is your place for recipes that are free of ads, interruptions, and those long and annoying stories that nobody cares about. You value your time and so do we.</h2>
+</div>
 <div class="content">
-    <h1>Welcome to ClearCook</h1>
-    <h1>ClearCook is your place for recipes that are free of ads, interruptions, and those long and annoying stories that nobody cares about. You value your time and so do we, so enjoy!</h1>
-    <div class="spacer"></div>
     <mat-divider></mat-divider>
-    <h3>Need some ideas? See some randomly picked recipes below!</h3>
+    <h2 class="white-text">Your recipes should be like your kitchen: free of unnecessary clutter and junk.</h2>
+    <h2 class="white-text">Know a recipe you want to view? Check out the "Recipes" tab.</h2>
+    <h2 class="white-text">Need some ideas? See some randomly picked recipes below!</h2>
 
     <div class="recipe-container-div">
         <ul class="recipe-container">
             <li class="recipe-card-list" 
                 *ngFor="let recipe of randomRecipes; index as i" >
                 <div class="recipe-card-cover" 
-                    (onClick)="openRandomRecipe(i)"
+                    (onClick)="openRecipe(recipe.id)"
                     style="cursor: pointer;">
                     <img class="recipe-card-img" src={{recipe.imageLink}} alt="Photo of recipe">
                 </div>
@@ -21,14 +29,20 @@
                     </div>
                 </div>
                 <div class=recipe-card-footer>
-                    <button mat-stroked-button class="save-button">Save</button>
-                    <button mat-stroked-button class="view-button">View Recipe</button>
+                    <button mat-stroked-button class="save-button" (onClick)="saveRecipe(recipe.id)">Save</button>
+                    <button mat-stroked-button class="view-button" (onClick)="openRecipe(recipe.id)">View Recipe</button>
                 </div>
             </li>
         </ul>
     </div>
     <div class="spacer"></div>
     <mat-divider></mat-divider>
-    <div class="spacer"></div>
+</div>
+<div class="footer-container">
+    <div class="footer-links">
+        <p style="cursor: pointer;">Contact Me</p>
+        <p style="cursor: pointer;">Help</p>
+        <p style="cursor: pointer;">Report Abuse</p>
+    </div>
 </div>
 
