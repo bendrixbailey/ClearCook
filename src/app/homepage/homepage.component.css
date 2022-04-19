@@ -3,19 +3,29 @@
     width: 100%;
     text-align: center;
     color: white;
+    min-width: 1200px;
 }
 
 .title-text-container{
     position: absolute;
-    top: 50%;
-    bottom: 50%;
+    top: 10%;
     margin-left: 10%;
     margin-right: 10%;
+    /* background: #171717;
+    border-radius: 5px; */
     /* transform: translate(50%, 50%); */
 }
 
 .title-text{
+    margin: 3%, 0;
     font-size: 100px;
+}
+
+.title-description-text{
+    margin-left: 10%;
+    margin-right: 10%;
+    position: absolute;
+    bottom: 20%;
 }
 
 .recipe-container{
@@ -40,6 +50,7 @@
     border-radius: 5px;
     margin: 0 15px 25px 15px;
     background: #171717;
+    border: 1px solid #616161;
 }
 
 .recipe-card-cover{
@@ -60,7 +71,8 @@
 }
 
 .recipe-card-footer{
-    margin: auto 16px 16px 16px;
+    /* margin: auto 16px 16px 16px; */
+    padding: 16px;
     display: inline-block;
 }
 
