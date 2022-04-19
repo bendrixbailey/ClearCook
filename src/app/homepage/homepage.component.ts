@@ -19,4 +19,8 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openRandomRecipe(index:number){
+    
+  }
+
 }

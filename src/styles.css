@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html {
-    background-color: #171717;
+    background-color: #1c1c1c;
 }
 h1{
     color: white;
@@ -15,9 +15,7 @@ h3{
     border-top-color: #2e2e2e;
     border-top-width: 3px;
 }
-mat-card-subtitle{
-    color: white;
-}
+
 .white-text{
     color: white;
 }

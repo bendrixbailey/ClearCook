@@ -5,34 +5,26 @@
     <mat-divider></mat-divider>
     <h3>Need some ideas? See some randomly picked recipes below!</h3>
 
-    <!-- <div fxLayout="row wrap" fxLayoutGap="16px grid">
-        <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="none" *ngFor="let recipe of randomRecipes">
-            <mat-card class="recipe-card">
-                <img mat-card-image class="card-image" src={{recipe.imageLink}} alt="Photo of recipe">
-                <mat-divider class="card-divider"></mat-divider>
-                <div class="card-body">
-                    <mat-card-title>{{recipe.name}}</mat-card-title>
-                    <mat-card-subtitle class="grey-text">Total Time: {{recipe.prepTime}} minutes</mat-card-subtitle>
-                    <mat-card-content class="card-text">
-                        <p>Just a simple description of this recipe.</p>
-                    </mat-card-content>
-                    <mat-divider class="card-divider"></mat-divider>
-                </div>
-                <mat-card-actions class="card-bottom">
-                    <button mat-button>Save</button>
-                    <button mat-button>View Recipe</button>
-                </mat-card-actions>
-            </mat-card>
-        </div>
-    </div> -->
-
     <div class="recipe-container-div">
         <ul class="recipe-container">
-            <li class="recipe-card-list">
-                hi baby I love you
-
+            <li class="recipe-card-list" 
+                *ngFor="let recipe of randomRecipes; index as i" >
+                <div class="recipe-card-cover" 
+                    (onClick)="openRandomRecipe(i)"
+                    style="cursor: pointer;">
+                    <img class="recipe-card-img" src={{recipe.imageLink}} alt="Photo of recipe">
+                </div>
+                <div class="recipe-card-content">
+                    <div>
+                        <h2 class="white-text">{{recipe.name}}</h2>
+                        <p class="grey-text">Total Time: {{recipe.prepTime}} minutes</p>
+                    </div>
+                </div>
+                <div class=recipe-card-footer>
+                    <button mat-stroked-button class="save-button">Save</button>
+                    <button mat-stroked-button class="view-button">View Recipe</button>
+                </div>
             </li>
-
         </ul>
     </div>
     <div class="spacer"></div>
