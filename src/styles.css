@@ -1,16 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-html {background-color: #565656;}
+html {
+    background-color: #1c1c1c;
+}
+h1{
+    color: white;
+}
+h3{
+    color:white;
+}
+
+.mat-divider{
+    width: 100%;
+    border-top-color: #2e2e2e;
+    border-top-width: 3px;
+}
+
+.white-text{
+    color: white;
+}
+.grey-text{
+    color: lightgrey;
+}
+
+.spacer{
+    padding: 50px;
+}
 
 .app-toolbar{
     position:sticky;
     top: 0;
     z-index: 1000;
-    background-color: #c9ada7;
+    background-color: #265a94;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    color: white;
+}
+
+.content {
+    display: flex;
+    margin: 82px;
+    /* max-width: 960px; */
+    flex-direction: column;
+    align-items: center;
 }
 
 /*
