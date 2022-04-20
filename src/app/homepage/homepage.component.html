@@ -13,16 +13,14 @@
     <div class="description-text">
         <h3 class="white-text">You will never see any intrusive ads, long stories, or random fluff. We strive 
             to provide nothing BUT recipes. Our recipes are sourced from all sorts of places. Some are personal recipes,
-            some are pulled from other websites that were full of ads. 
-            We have recipes in many categories such as
-            <ul style="margin-left: 20%;">
-                <li>Grilling</li>
-                <li>Drinks</li>
-                <li>Bread</li>
-                <li>Pasta</li>
-                <li>Desserts</li>
-            </ul>
+            some are pulled from other websites that were full of ads.
         </h3>
+        <h4 class="white-text">See some of our most populcar categories below:</h4>
+        <mat-chip-list>
+            <mat-chip class="ideas-chips" *ngFor="let category of categories">
+                {{category}}
+            </mat-chip>
+        </mat-chip-list>
     </div>
     <h2 class="white-text">Know a recipe you want to view? Check out the "Recipes" tab.</h2>
     <mat-divider></mat-divider>

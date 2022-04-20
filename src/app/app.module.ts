@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatChipsModule } from '@angular/material/chips'
 import { MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -40,6 +41,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     ReactiveFormsModule,
     MatInputModule,
     MatDividerModule,
+    MatChipsModule,
     MatCardModule,
     MatListModule,
     MatGridListModule,

@@ -12,6 +12,19 @@ export class HomepageComponent implements OnInit {
     beefStew, chickenRisotto, beefStew, chickenRisotto
   ];
 
+  public categories = [
+    "Grilling",
+    "Drinks",
+    "Breads",
+    "Baking",
+    "Pasta",
+    "Desserts",
+    "Gourmet",
+    "French",
+    "Veggies",
+    "Burgers"
+  ]
+
   public randomTitleImages = [
     "https://embed.widencdn.net/img/cambriausa/xqejgzkmty/1500x1000px/JSD%20Lakeside_02737036dea-1614-4646-b951-00b90f03dcdd.jpeg?keep=c&crop=yes&u=kdpb2n",
     "https://www.solakitchens.com/wp-content/uploads/2019/08/island-front-landscape-1.jpg",
