@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 
 import { RecipesComponent } from './recipes/recipes.component';
 import { MyrecipesComponent } from './myrecipes/myrecipes.component';
@@ -18,5 +18,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { 
-  
+  constructor(router:Router){
+    router.navigate(['/home']);
+  }
 }

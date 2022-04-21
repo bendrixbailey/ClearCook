@@ -18,7 +18,8 @@
         <h4 class="white-text">See some of our most populcar categories below:</h4>
         <mat-chip-list>
             <mat-chip class="ideas-chips" *ngFor="let category of categories">
-                {{category}}
+                <img class="ideas-chip-img" src="{{category.img}}">
+                {{category.name}}
             </mat-chip>
         </mat-chip-list>
     </div>
