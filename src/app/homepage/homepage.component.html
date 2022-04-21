@@ -1,6 +1,6 @@
 <div class="title-container">
     <!-- <img src="http://ladahome.com/wp-content/uploads/2018/08/97-Fancy-Black-and-White-Kitchen-Ideas-13.jpg" alt="Image of modern Kitchen" style="width: 100%;"> -->
-    <img src="https://www.solakitchens.com/wp-content/uploads/2019/08/island-front-landscape-1.jpg" alt="Image of modern Kitchen" style="width: 100%;">
+    <img class="title-img" src="https://www.solakitchens.com/wp-content/uploads/2019/08/island-front-landscape-1.jpg" alt="Image of modern Kitchen" style="width: 100%;">
     <!-- <img src="https://kitchinsider.com/wp-content/uploads/2019/09/Harvey-Jones-Dark-Blue-Shaker-Kitchen-1024x701.jpg" alt="Image of modern Kitchen" style="width: 100%;"> -->
     <div class="title-text-container">
         <h1 class="title-text">Welcome to ClearCook</h1>
@@ -10,9 +10,24 @@
 <div class="content">
     <mat-divider></mat-divider>
     <h2 class="white-text">Your recipes should be like your kitchen: free of unnecessary clutter and junk.</h2>
+    <div class="description-text">
+        <h3 class="white-text">You will never see any intrusive ads, long stories, or random fluff. We strive 
+            to provide nothing BUT recipes. Our recipes are sourced from all sorts of places. Some are personal recipes,
+            some are pulled from other websites that were full of ads.
+        </h3>
+        <!-- <h4 class="white-text">See some of our most populcar categories below:</h4>
+        <mat-chip-list>
+            <mat-chip class="ideas-chips" *ngFor="let category of categories">
+                <img class="ideas-chip-img" src="{{category.img}}">
+                {{category.name}}
+            </mat-chip>
+        </mat-chip-list> -->
+    </div>
     <h2 class="white-text">Know a recipe you want to view? Check out the "Recipes" tab.</h2>
-    <h2 class="white-text">Need some ideas? See some randomly picked recipes below!</h2>
-
+    <mat-divider></mat-divider>
+    <div class="ideas">
+        <h2 class="ideas-text">Need some ideas? See some randomly picked recipes below!</h2>
+    </div>
     <div class="recipe-container-div">
         <ul class="recipe-container">
             <li class="recipe-card-list" 
@@ -39,10 +54,29 @@
     <mat-divider></mat-divider>
 </div>
 <div class="footer-container">
-    <div class="footer-links">
-        <p style="cursor: pointer;">Contact Me</p>
-        <p style="cursor: pointer;">Help</p>
-        <p style="cursor: pointer;">Report Abuse</p>
+    <div class="footer-list">
+        <div class="footer-list-item"></div>
+        <div class="footer-list-item">
+            <div class="footer-links">
+                <h1>More</h1>
+                <p style="cursor: pointer;">Contact Me</p>
+                <p style="cursor: pointer;">Help</p>
+                <p style="cursor: pointer;">Report Abuse</p>
+                <p style="cursor: pointer;">Documentation</p>
+            </div>
+        </div>
+        <div class="footer-div-divider">
+            <mat-divider vertical="true" class="footer-divider"></mat-divider>
+        </div>
+        <div class="footer-list-item">
+            <div class="footer-links">
+                <h1>Connect</h1>
+                <p style="cursor: pointer;">Linkedin</p>
+                <p style="cursor: pointer;">Instagram</p>
+                <p style="cursor: pointer;">Github</p>
+            </div>
+        </div>
+        <div class="footer-list-item"></div>
     </div>
 </div>
 

@@ -47,25 +47,11 @@ h3{
     align-items: center;
 }
 
-/*
-Color Scheme 1:
-    #D7CEC7
-    #565656
-    #76323F
-    #C09F80
+.inline-img{
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+}
 
-Color Scheme 2:
-    #22223b
-    #4a4e69
-    #9a8c98
-    #c9ada7
-    #f2e9e4
-
-Color Scheme 3:
-    #1B262C
-    #0F4C75
-    #3282B8
-    #BBE1FA
-*/
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

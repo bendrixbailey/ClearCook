@@ -1,16 +1,17 @@
+
+/*Title css classes================*/
 .title-container{
     position: relative;
     width: 100%;
     text-align: center;
     color: white;
-    min-width: 1200px;
+    /* min-width: 1200px; */
 }
 
 .title-text-container{
     position: absolute;
     top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 100%;
     /* background: #171717;
     border-radius: 5px; */
     /* transform: translate(50%, 50%); */
@@ -19,6 +20,7 @@
 .title-text{
     margin: 3%, 0;
     font-size: 100px;
+    text-align: center;
 }
 
 .title-description-text{
@@ -26,8 +28,43 @@
     margin-right: 10%;
     position: absolute;
     bottom: 20%;
+    text-align: center;
 }
 
+.title-img{
+    width: 100%;
+}
+
+.description-text{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*Ideas css classes===================*/
+
+.ideas-text{
+    color: white;
+    font-size: 30px;
+    display: inline;
+}
+
+.ideas{
+    text-align: center;
+    display: flex;
+}
+
+.ideas-chips{
+    height: 60px !important;
+}
+
+
+.ideas-chip-img{
+    width: 100%;
+    height: 100%;
+    padding-right: 5px;
+}
+
+/*Recipe card css classes=================*/
 .recipe-container{
     width: 100%;
     display: flex;
@@ -37,7 +74,7 @@
 
 .recipe-container-div{
     display: block;
-    width: 1140px;
+    /* width: 1140px; */
 
 }
 
@@ -61,18 +98,19 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     width: 100%;
-    height: 350px;
+    height: 20vw;
     object-fit: cover;
 }
 
 .recipe-card-content{
-    padding: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
     position: relative;
 }
 
 .recipe-card-footer{
     /* margin: auto 16px 16px 16px; */
-    padding: 16px;
+    padding: 0 16px 16px 16px;
     display: inline-block;
 }
 
@@ -87,11 +125,31 @@
     color: #347dcf;
 }
 
+/*Footer css classes==============*/
 .footer-container{
     position: relative;
     width: 100%;
     text-align: center;
     background: #347dcf;
+}
+
+.footer-list{
+    display: flex;
+    margin: 0;
+}
+
+.footer-list-item{
+    flex: 24%;
+}
+
+.footer-div-divider{
+    flex: 4%;
+}
+
+.footer-divider{
+    height: 90%;
+    margin-top: 20%;
+    margin-bottom: 10%;
 }
 
 .footer-links{
@@ -101,44 +159,3 @@
     padding-top: 1%;
     padding-bottom: 3%;
 }
-
-
-
-
-
-/* .card-divider{
-    border-top-color: #21528a;
-}
-
-.card-body{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    position: relative;
-}
-
-.card-footer{
-    position: absolute;
-    bottom: 0;
-}
-
-.recipe-card{
-    background-color: #265a94;
-    color: white;
-    border-radius: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.grid-layout-custom{
-    width: 100%;
-}
-
-.card-image{
-    object-fit: cover;
-    width: 100%;
-    max-width: 100%;
-    height: 400px;
-    margin: 0px 0px 0px;
-    /* padding: 15px; }
-    */
