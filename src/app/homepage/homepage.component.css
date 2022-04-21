@@ -5,7 +5,7 @@
     width: 100%;
     text-align: center;
     color: white;
-    min-width: 1200px;
+    /* min-width: 1200px; */
 }
 
 .title-text-container{
@@ -29,6 +29,10 @@
     position: absolute;
     bottom: 20%;
     text-align: center;
+}
+
+.title-img{
+    width: 100%;
 }
 
 .description-text{
@@ -70,7 +74,7 @@
 
 .recipe-container-div{
     display: block;
-    width: 1140px;
+    /* width: 1140px; */
 
 }
 
@@ -94,7 +98,7 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     width: 100%;
-    height: 350px;
+    height: 20vw;
     object-fit: cover;
 }
 
@@ -127,6 +131,25 @@
     width: 100%;
     text-align: center;
     background: #347dcf;
+}
+
+.footer-list{
+    display: flex;
+    margin: 0;
+}
+
+.footer-list-item{
+    flex: 24%;
+}
+
+.footer-div-divider{
+    flex: 4%;
+}
+
+.footer-divider{
+    height: 90%;
+    margin-top: 20%;
+    margin-bottom: 10%;
 }
 
 .footer-links{

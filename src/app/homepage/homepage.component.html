@@ -1,6 +1,6 @@
 <div class="title-container">
     <!-- <img src="http://ladahome.com/wp-content/uploads/2018/08/97-Fancy-Black-and-White-Kitchen-Ideas-13.jpg" alt="Image of modern Kitchen" style="width: 100%;"> -->
-    <img src="https://www.solakitchens.com/wp-content/uploads/2019/08/island-front-landscape-1.jpg" alt="Image of modern Kitchen" style="width: 100%;">
+    <img class="title-img" src="https://www.solakitchens.com/wp-content/uploads/2019/08/island-front-landscape-1.jpg" alt="Image of modern Kitchen" style="width: 100%;">
     <!-- <img src="https://kitchinsider.com/wp-content/uploads/2019/09/Harvey-Jones-Dark-Blue-Shaker-Kitchen-1024x701.jpg" alt="Image of modern Kitchen" style="width: 100%;"> -->
     <div class="title-text-container">
         <h1 class="title-text">Welcome to ClearCook</h1>
@@ -15,13 +15,13 @@
             to provide nothing BUT recipes. Our recipes are sourced from all sorts of places. Some are personal recipes,
             some are pulled from other websites that were full of ads.
         </h3>
-        <h4 class="white-text">See some of our most populcar categories below:</h4>
+        <!-- <h4 class="white-text">See some of our most populcar categories below:</h4>
         <mat-chip-list>
             <mat-chip class="ideas-chips" *ngFor="let category of categories">
                 <img class="ideas-chip-img" src="{{category.img}}">
                 {{category.name}}
             </mat-chip>
-        </mat-chip-list>
+        </mat-chip-list> -->
     </div>
     <h2 class="white-text">Know a recipe you want to view? Check out the "Recipes" tab.</h2>
     <mat-divider></mat-divider>
@@ -54,10 +54,28 @@
     <mat-divider></mat-divider>
 </div>
 <div class="footer-container">
-    <div class="footer-links">
-        <p style="cursor: pointer;">Contact Me</p>
-        <p style="cursor: pointer;">Help</p>
-        <p style="cursor: pointer;">Report Abuse</p>
+    <div class="footer-list">
+        <div class="footer-list-item"></div>
+        <div class="footer-list-item">
+            <div class="footer-links">
+                <h1>More</h1>
+                <p style="cursor: pointer;">Contact Me</p>
+                <p style="cursor: pointer;">Help</p>
+                <p style="cursor: pointer;">Report Abuse</p>
+            </div>
+        </div>
+        <div class="footer-div-divider">
+            <mat-divider vertical="true" class="footer-divider"></mat-divider>
+        </div>
+        <div class="footer-list-item">
+            <div class="footer-links">
+                <h1>Connect</h1>
+                <p style="cursor: pointer;">Contact Me</p>
+                <p style="cursor: pointer;">Help</p>
+                <p style="cursor: pointer;">Report Abuse</p>
+            </div>
+        </div>
+        <div class="footer-list-item"></div>
     </div>
 </div>
 
