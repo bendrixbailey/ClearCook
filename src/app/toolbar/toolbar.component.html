@@ -9,7 +9,7 @@
             <button mat-button title="My Recipes" class="toolbar-button" routerLink="/myrecipes">My Recipes</button>
             <div class="search-div">
                 <mat-form-field class="search-bar">
-                    <input matInput type="text" placeholder="Search" [(ngModel)]="search">
+                    <input matInput type="text" placeholder="Search" [(ngModel)]="search" (keyup.enter)="searchRecipes(search)">
                     <button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="search=''">
                         <mat-icon>close</mat-icon>
                     </button>

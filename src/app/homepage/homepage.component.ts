@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { beefStew, chickenRisotto, Recipe } from '../recipe';
+import { HttpClient } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { environment, ApiPaths } from 'src/environments/environment';
 
 @Component({
   selector: 'app-homepage',
@@ -8,9 +11,8 @@ import { beefStew, chickenRisotto, Recipe } from '../recipe';
 })
 export class HomepageComponent implements OnInit {
 
-  public randomRecipes = [
-    beefStew, chickenRisotto, beefStew, chickenRisotto
-  ];
+  public randomRecipes : Recipe[] = [];
+  public db_connection = true;
 
   public categories = [
     {name: "Grilling", img: "https://thumbor.thedailymeal.com/LApuqqddU-6acE3pJVcGdCe1eSo=/774x516/filters:focal(300x240:301x241):format(webp)/https://www.thedailymeal.com/sites/default/files/2015/09/08/mainshutterstock_grilledste.jpg"},
@@ -28,14 +30,24 @@ export class HomepageComponent implements OnInit {
   public randomTitleImages = [
     "https://embed.widencdn.net/img/cambriausa/xqejgzkmty/1500x1000px/JSD%20Lakeside_02737036dea-1614-4646-b951-00b90f03dcdd.jpeg?keep=c&crop=yes&u=kdpb2n",
     "https://www.solakitchens.com/wp-content/uploads/2019/08/island-front-landscape-1.jpg",
-    
   ]
 
   gridColumns = 2;
+  baseUrl = environment.baseUrl;
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
+    let url = `${this.baseUrl}${ApiPaths.Home}`
+    this.http.get<Recipe[]>(url).subscribe(data =>{
+      this.randomRecipes = data;
+    })
+
+    if(this.randomRecipes.length = 0){
+      this.db_connection=false;
+    }else{
+      this.db_connection=true;
+    }
   }
 
   openRecipe(recipeId:number){
@@ -44,6 +56,10 @@ export class HomepageComponent implements OnInit {
 
   saveRecipe(recipeId: number){
 
+  }
+
+  goToLink(url: string){
+    window.open(url, '_blank');
   }
 
 }

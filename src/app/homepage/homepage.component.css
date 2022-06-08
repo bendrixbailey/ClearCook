@@ -19,8 +19,9 @@
 
 .title-text{
     margin: 3%, 0;
-    font-size: 100px;
+    font-size: 500%;
     text-align: center;
+    
 }
 
 .title-description-text{
@@ -112,6 +113,7 @@
     /* margin: auto 16px 16px 16px; */
     padding: 0 16px 16px 16px;
     display: inline-block;
+    justify-content: last;
 }
 
 .save-button{

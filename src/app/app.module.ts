@@ -13,6 +13,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips'
 import { MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -47,6 +48,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     MatGridListModule,
     FlexLayoutModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

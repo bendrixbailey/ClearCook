@@ -28,7 +28,10 @@
     <div class="ideas">
         <h2 class="ideas-text">Need some ideas? See some randomly picked recipes below!</h2>
     </div>
-    <div class="recipe-container-div">
+    <div *ngIf="!db_connection" class="ideas">
+        <h3 class="ideas-text">Sorry! There must be some issue connecting to the server! Reload or try back later.</h3>
+    </div>
+    <div *ngIf="db_connection" class="recipe-container-div">
         <ul class="recipe-container">
             <li class="recipe-card-list" 
                 *ngFor="let recipe of randomRecipes; index as i" >
@@ -71,9 +74,9 @@
         <div class="footer-list-item">
             <div class="footer-links">
                 <h1>Connect</h1>
-                <p style="cursor: pointer;">Linkedin</p>
+                <p (click)="goToLink('https://www.linkedin.com/in/bendrix-n-bailey1999/')" style="cursor: pointer;">Linkedin</p>
                 <p style="cursor: pointer;">Instagram</p>
-                <p style="cursor: pointer;">Github</p>
+                <p (click)="goToLink('https://github.com/bendrixbailey')" style="cursor: pointer;">Github</p>
             </div>
         </div>
         <div class="footer-list-item"></div>
