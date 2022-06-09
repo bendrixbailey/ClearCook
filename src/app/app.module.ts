@@ -21,6 +21,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MyrecipesComponent } from './myrecipes/myrecipes.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     ToolbarComponent,
     MyrecipesComponent,
     FavoritesComponent,
-    HomepageComponent
+    HomepageComponent,
+    RecipeCardComponent
   ],
   imports: [
     BrowserModule,

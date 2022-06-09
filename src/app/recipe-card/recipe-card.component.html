@@ -1,0 +1,17 @@
+<li class="recipe-card-list">
+    <div class="recipe-card-cover" 
+        (onClick)="openRecipe()"
+        style="cursor: pointer;">
+        <img class="recipe-card-img" src={{recipe.imageLink}} alt="Photo of recipe">
+    </div>
+    <div class="recipe-card-content">
+        <div>
+            <h2 class="white-text">{{recipe.name}}</h2>
+            <p class="grey-text">Total Time: {{recipe.prepTime}} minutes</p>
+        </div>
+    </div>
+    <div class=recipe-card-footer>
+        <button mat-stroked-button class="save-button" (onClick)="saveRecipe()">Save</button>
+        <button mat-stroked-button class="view-button" (onClick)="openRecipe()">View Recipe</button>
+    </div>
+</li>
