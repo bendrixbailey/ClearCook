@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'ClearCook'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_17B9D2C49EE04DBCBA8B3A6C4ED212E3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F023B399413E423FA84F6F641A6847AD }}
           package: .
