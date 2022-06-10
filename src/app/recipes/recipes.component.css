@@ -1,0 +1,35 @@
+.top-box{
+    color: white;
+    padding: 10px;
+}
+
+.search-bar{
+    outline: 2px white;
+    border: 2px;
+    font-size: small;
+    width: 80%;
+    padding-bottom: 0px;
+}
+
+.mat-form-field{
+    font-size: 15px;
+}
+
+.results-text{
+    margin-top: 0px;
+}
+
+.recipe-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+
+.recipe-container-div{
+    display: flex;
+    /* width: 1140px; */
+
+}
+
