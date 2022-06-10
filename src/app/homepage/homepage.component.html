@@ -1,72 +1,74 @@
-<div class="title-container">
-    <!-- <img src="http://ladahome.com/wp-content/uploads/2018/08/97-Fancy-Black-and-White-Kitchen-Ideas-13.jpg" alt="Image of modern Kitchen" style="width: 100%;"> -->
-    <img class="title-img" src="https://www.solakitchens.com/wp-content/uploads/2019/08/island-front-landscape-1.jpg" alt="Image of modern Kitchen" style="width: 100%;">
-    <!-- <img src="https://kitchinsider.com/wp-content/uploads/2019/09/Harvey-Jones-Dark-Blue-Shaker-Kitchen-1024x701.jpg" alt="Image of modern Kitchen" style="width: 100%;"> -->
-    <div class="title-text-container">
-        <h1 class="title-text">Welcome to ClearCook</h1>
+<div>
+    <div class="title-container">
+        <!-- <img src="http://ladahome.com/wp-content/uploads/2018/08/97-Fancy-Black-and-White-Kitchen-Ideas-13.jpg" alt="Image of modern Kitchen" style="width: 100%;"> -->
+        <img class="title-img" src="https://www.solakitchens.com/wp-content/uploads/2019/08/island-front-landscape-1.jpg" alt="Image of modern Kitchen" style="width: 100%;">
+        <!-- <img src="https://kitchinsider.com/wp-content/uploads/2019/09/Harvey-Jones-Dark-Blue-Shaker-Kitchen-1024x701.jpg" alt="Image of modern Kitchen" style="width: 100%;"> -->
+        <div class="title-text-container">
+            <h1 class="title-text">Welcome to ClearCook</h1>
+        </div>
+        <h2 class="title-description-text">Clearcook is your place for recipes that are free of ads, interruptions, and those long and annoying stories that nobody cares about. You value your time and so do we.</h2>
     </div>
-    <h2 class="title-description-text">Clearcook is your place for recipes that are free of ads, interruptions, and those long and annoying stories that nobody cares about. You value your time and so do we.</h2>
-</div>
-<div class="content">
-    <mat-divider></mat-divider>
-    <h2 class="white-text">Your recipes should be like your kitchen: free of unnecessary clutter and junk.</h2>
-    <div class="description-text">
-        <h3 class="white-text">You will never see any intrusive ads, long stories, or random fluff. We strive 
-            to provide nothing BUT recipes. Our recipes are sourced from all sorts of places. Some are personal recipes,
-            some are pulled from other websites that were full of ads.
-        </h3>
-        <!-- <h4 class="white-text">See some of our most populcar categories below:</h4>
-        <mat-chip-list>
-            <mat-chip class="ideas-chips" *ngFor="let category of categories">
-                <img class="ideas-chip-img" src="{{category.img}}">
-                {{category.name}}
-            </mat-chip>
-        </mat-chip-list> -->
+    <div class="content">
+        <!-- <mat-divider></mat-divider> -->
+        <h2 class="white-text">Your recipes should be like your kitchen: free of unnecessary clutter and junk.</h2>
+        <div class="description-text">
+            <h3 class="white-text">You will never see any intrusive ads, long stories, or random fluff. We strive 
+                to provide nothing BUT recipes. Our recipes are sourced from all sorts of places. Some are personal recipes,
+                some are pulled from other websites that were full of ads.
+            </h3>
+            <!-- <h4 class="white-text">See some of our most populcar categories below:</h4>
+            <mat-chip-list>
+                <mat-chip class="ideas-chips" *ngFor="let category of categories">
+                    <img class="ideas-chip-img" src="{{category.img}}">
+                    {{category.name}}
+                </mat-chip>
+            </mat-chip-list> -->
+        </div>
+        <h2 class="white-text">Know a recipe you want to view? Check out the "Recipes" tab.</h2>
+        <mat-divider></mat-divider>
+        <div class="ideas">
+            <h2 class="ideas-text">Need some ideas? See some randomly picked recipes below!</h2>
+        </div>
+        <div *ngIf="!db_connection" class="ideas">
+            <h3 class="ideas-text">Sorry! There must be some issue connecting to the server! Reload or try back later.</h3>
+        </div>
+        <div *ngIf="db_connection" class="recipe-container-div">
+            <ul class="recipe-container">
+                <app-recipe-card 
+                    *ngFor="let recipe of randomRecipes; index as i"
+                    [recipe] = "recipe"
+                    ></app-recipe-card>
+                
+            </ul>
+        </div>
+        <div class="spacer"></div>
+        <mat-divider></mat-divider>
     </div>
-    <h2 class="white-text">Know a recipe you want to view? Check out the "Recipes" tab.</h2>
-    <mat-divider></mat-divider>
-    <div class="ideas">
-        <h2 class="ideas-text">Need some ideas? See some randomly picked recipes below!</h2>
-    </div>
-    <div *ngIf="!db_connection" class="ideas">
-        <h3 class="ideas-text">Sorry! There must be some issue connecting to the server! Reload or try back later.</h3>
-    </div>
-    <div *ngIf="db_connection" class="recipe-container-div">
-        <ul class="recipe-container">
-            <app-recipe-card 
-                *ngFor="let recipe of randomRecipes; index as i"
-                [recipe] = "recipe"
-                ></app-recipe-card>
-            
-        </ul>
-    </div>
-    <div class="spacer"></div>
-    <mat-divider></mat-divider>
-</div>
-<div class="footer-container">
-    <div class="footer-list">
-        <div class="footer-list-item"></div>
-        <div class="footer-list-item">
-            <div class="footer-links">
-                <h1>More</h1>
-                <p style="cursor: pointer;">Contact Me</p>
-                <p style="cursor: pointer;">Help</p>
-                <p style="cursor: pointer;">Report Abuse</p>
-                <p style="cursor: pointer;">Documentation</p>
+    <div class="footer-container">
+        <div class="footer-list">
+            <div class="footer-list-item"></div>
+            <div class="footer-list-item">
+                <div class="footer-links">
+                    <h1>More</h1>
+                    <p style="cursor: pointer;">Contact Me</p>
+                    <p style="cursor: pointer;">Help</p>
+                    <p style="cursor: pointer;">Report Abuse</p>
+                    <p style="cursor: pointer;">Documentation</p>
+                </div>
             </div>
-        </div>
-        <div class="footer-div-divider">
-            <mat-divider vertical="true" class="footer-divider"></mat-divider>
-        </div>
-        <div class="footer-list-item">
-            <div class="footer-links">
-                <h1>Connect</h1>
-                <p (click)="goToLink('https://www.linkedin.com/in/bendrix-n-bailey1999/')" style="cursor: pointer;">Linkedin</p>
-                <p style="cursor: pointer;">Instagram</p>
-                <p (click)="goToLink('https://github.com/bendrixbailey')" style="cursor: pointer;">Github</p>
+            <div class="footer-div-divider">
+                <mat-divider vertical="true" class="footer-divider"></mat-divider>
             </div>
+            <div class="footer-list-item">
+                <div class="footer-links">
+                    <h1>Connect</h1>
+                    <p (click)="goToLink('https://www.linkedin.com/in/bendrix-n-bailey1999/')" style="cursor: pointer;">Linkedin</p>
+                    <p style="cursor: pointer;">Instagram</p>
+                    <p (click)="goToLink('https://github.com/bendrixbailey')" style="cursor: pointer;">Github</p>
+                </div>
+            </div>
+            <div class="footer-list-item"></div>
         </div>
-        <div class="footer-list-item"></div>
     </div>
 </div>
 
