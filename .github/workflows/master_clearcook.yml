@@ -27,6 +27,8 @@ jobs:
           npm install
           npm run build:prod
           ls
+          cd dist
+          ls
         working-directory: .
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
