@@ -1,5 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: "https://clearcook-api.azurewebsites.net/"
 };
 
 export enum ApiPaths{
