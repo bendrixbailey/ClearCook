@@ -6,8 +6,25 @@ html {
 h1{
     color: white;
 }
+
 h3{
     color:white;
+}
+
+
+@media screen and (max-width: 1200px){
+    h1{
+        font-size: 4vw;
+    }
+    h2{
+        font-size: 3vw;
+    }
+    h3{
+        font-size: 2vw;
+    }
+    p{
+        font-size: 2vw;
+    }
 }
 
 .mat-divider{
@@ -30,7 +47,7 @@ h3{
 
 .content {
     display: flex;
-    margin: 82px;
+    margin: 3vw 5vw 3vw 5vw;
     flex-direction: column;
     align-items: center;
 }

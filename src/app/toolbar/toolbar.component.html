@@ -3,18 +3,44 @@
     <!-- <h1>Clear Cook</h1> -->
     <mat-toolbar-row>
         <button mat-button title="Home" class="title-button" routerLink="/home">Clear Cook</button>
-        <button mat-button title="Recipes" class="toolbar-button" routerLink="/recipes">Recipes</button>
-        <button mat-button title="Favorites" class="toolbar-button" routerLink="/favorites">Favorites</button>
-        <button mat-button title="My Recipes" class="toolbar-button" routerLink="/myrecipes">My Recipes</button>
-        <div class="search-div">
+        <div *ngIf="screenWidth > 800">
+            <button mat-button title="Recipes" class="toolbar-button" routerLink="/recipes">Recipes</button>
+            <button mat-button title="Favorites" class="toolbar-button" routerLink="/favorites">Favorites</button>
+            <button mat-button title="My Recipes" class="toolbar-button" routerLink="/myrecipes">My Recipes</button>
+            
+            
+        </div>
+        <div *ngIf="screenWidth > 800" class="search-div">
             <mat-form-field class="search-bar">
                 <input matInput type="text" placeholder="Search" [(ngModel)]="search" (keyup.enter)="searchRecipes(search)">
                 <button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="search=''">
                     <mat-icon>close</mat-icon>
                 </button>
             </mat-form-field>
-            <button mat-button title="Sign In"  >Sign In</button>
+            <button mat-button title="Sign In">Sign In</button>
         </div>
+
+        <span *ngIf="screenWidth <= 800" class="expander"></span>
+        <div *ngIf="screenWidth <= 800">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item title="Recipes" class="toolbar-button" routerLink="/recipes">Recipes</button>
+                <button mat-menu-item title="Favorites" class="toolbar-button" routerLink="/favorites">Favorites</button>
+                <button mat-menu-item title="My Recipes" class="toolbar-button" routerLink="/myrecipes">My Recipes</button>
+                <div mat-menu-item class="search-div">
+                    <mat-form-field class="search-bar">
+                        <input matInput type="text" placeholder="Search" [(ngModel)]="search" (keyup.enter)="searchRecipes(search)">
+                        <button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="search=''">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+                <button mat-menu-item title="Sign In"  >Sign In</button>
+            </mat-menu>
+        </div>
+        
         <!-- <mat-form-field class="toolbar-left">
             
         </mat-form-field> -->

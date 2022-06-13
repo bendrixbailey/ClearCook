@@ -14,6 +14,7 @@ import { MatChipsModule } from '@angular/material/chips'
 import { MatGridListModule} from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+import { MatMenu, MatMenuModule } from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -51,6 +52,7 @@ import { RecipeCardComponent } from './recipe-card/recipe-card.component';
     FlexLayoutModule,
     FormsModule,
     HttpClientModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

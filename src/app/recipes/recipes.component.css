@@ -1,3 +1,4 @@
+/*Formatting for search box*/
 .top-box{
     color: white;
     padding: 10px;
@@ -13,10 +14,40 @@
 
 .mat-form-field{
     font-size: 15px;
+    border-color: white;
 }
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+   }
+  
+   ::ng-deep.mat-form-field-outline {
+    /*change color of underline*/
+    color: white !important;
+  } 
+  
+  ::ng-deep.mat-form-field-autofill-control {
+   /*change color of underline when focused*/
+    color: white;
+  }
+  ::ng-deep.mat-label {
+    /*change color of underline when focused*/
+     color: white;
+   }
 
 .results-text{
     margin-top: 0px;
+}
+
+
+/*Formatting for recipe card layout.*/
+
+.recipe-container-div{
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 1140px; */
+
 }
 
 .recipe-container{
@@ -27,9 +58,6 @@
     padding: 0px;
 }
 
-.recipe-container-div{
-    display: flex;
-    /* width: 1140px; */
 
-}
+
 
