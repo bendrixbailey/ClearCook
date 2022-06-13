@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { ApiPaths, environment } from 'src/environments/environment';
 import { Recipe } from '../recipe';
@@ -15,17 +15,20 @@ export class RecipesComponent implements OnInit {
   search = "";
   searchResult = ""
   public recipes: Recipe[] = [];
+  columns: number = 4;
+
+  @ViewChild('box', {static: false}) box: ElementRef;
 
   searchUrl = environment.baseUrl + ApiPaths.RecipeByName
 
   ngOnInit(): void {
     this.search = this.route.snapshot.paramMap.get('search')!;
     this.getRecipesByName(this.search);
-    console.log(this.recipes);
+    this.setColumns();
   }
 
   getRecipesByName(name: string){
-    if(name != '' && name != null){
+    if(name != "" && name != null){
       this.http.get<Recipe[]>(environment.baseUrl + ApiPaths.RecipeByName + name).subscribe(data =>{
         this.searchResult = name;
         this.recipes = data;
@@ -35,6 +38,11 @@ export class RecipesComponent implements OnInit {
         this.recipes = data;
       })
     }
+    console.log(this.recipes);
+  }
+
+  setColumns() {
+    this.columns = Math.floor(window.innerWidth / 300);
   }
 
 }

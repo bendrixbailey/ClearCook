@@ -1,28 +1,26 @@
 <div class="top-box">
     <div>
-        <mat-form-field appearance="outline" class="search-bar" style="margin-bottom: -1.25em">
-            <mat-label>Search for a Recipe</mat-label>
-            <input matInput type="text" placeholder="Search" [(ngModel)]="search" (keyup.enter)="getRecipesByName(search)">
+        <mat-form-field appearance="outline" class="search-bar" style="margin-bottom: -1.25em;">
+            <mat-label style="color: white;">Search for a Recipe</mat-label>
+            <input matInput type="text" style="color: white;" [(ngModel)]="search" (keyup.enter)="getRecipesByName(search)">
             <button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="search=''">
                 <mat-icon>close</mat-icon>
             </button>
         </mat-form-field>
     </div>
-    <h1 *ngIf="searchResult" class="results-text">Results for : {{search}}</h1>
+    <h1 *ngIf="searchResult" class="results-text">Results for: {{search}}</h1>
     <h1 *ngIf="!searchResult" class="results-text">All Recipes</h1>
 </div>
 <div class="content">
+
     <div class="recipe-container-div">
-        <ul class="recipe-container">
-            <app-recipe-card 
-                *ngFor="let recipe of recipes; index as i"
-                [recipe] = "recipe"
-                ></app-recipe-card>
+        <ul class="recipe-container" *ngFor="let recipe of recipes">
+            <app-recipe-card [recipe] = "recipe"></app-recipe-card>
         </ul>
     </div>
     <div class="spacer"></div>
     <mat-divider></mat-divider>
-    <h1 *ngIf="recipes">No recipes match that search! Try something broader, or choose from a popular category!</h1>
+    <!-- <h1 *ngIf="recipes">No recipes match that search! Try something broader, or choose from a popular category!</h1> -->
 </div>
 
 <!-- https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp -->

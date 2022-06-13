@@ -6,10 +6,9 @@
     font-size: larger;
 }
 
-.toolbar-left{
-    font-size: smaller;
-    position: absolute;
-    right: 10px;
+
+.expander{
+    flex: 1 1 auto;
 }
 
 .search-div{
@@ -35,3 +34,4 @@
     width: 100%;
     color: white;
 }
+
