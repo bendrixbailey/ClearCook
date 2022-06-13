@@ -1,7 +1,7 @@
 /*Formatting for search box*/
 .top-box{
-    color: white;
-    padding: 10px;
+    color: #ffffff;
+    padding: 1vh 4vh 1vh 4vh;
 }
 
 .search-bar{
@@ -20,21 +20,26 @@
 ::ng-deep .mat-focused .mat-form-field-label {
     /*change color of label*/
     color: white !important;
-   }
+}
   
-   ::ng-deep.mat-form-field-outline {
+::ng-deep.mat-form-field-flex {
     /*change color of underline*/
     color: white !important;
-  } 
+} 
+
+::ng-deep.mat-form-field-underline {
+    /*change color of underline when focused*/
+    background-color: white !important;
+}
   
-  ::ng-deep.mat-form-field-autofill-control {
+::ng-deep.mat-form-field-autofill-control {
    /*change color of underline when focused*/
     color: white;
-  }
-  ::ng-deep.mat-label {
+}
+::ng-deep.mat-label {
     /*change color of underline when focused*/
      color: white;
-   }
+}
 
 .results-text{
     margin-top: 0px;
@@ -43,19 +48,19 @@
 
 /*Formatting for recipe card layout.*/
 
-.recipe-container-div{
-    display: flex;
-    flex-wrap: wrap;
-    /* width: 1140px; */
-
-}
-
 .recipe-container{
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 0px;
+    margin: 0px;
+}
+
+.recipe-container-div{
+    display: flex;
+    /* width: 1140px; */
+
 }
 
 
