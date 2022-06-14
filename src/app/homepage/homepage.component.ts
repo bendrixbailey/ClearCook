@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { beefStew, chickenRisotto, Recipe } from '../recipe';
+import { Recipe } from '../recipe';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { environment, ApiPaths } from 'src/environments/environment';

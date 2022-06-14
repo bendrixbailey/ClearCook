@@ -1,7 +1,11 @@
 /*Formatting for search box*/
 .top-box{
     color: #ffffff;
-    padding: 1vh 4vh 1vh 4vh;
+    padding: 1vw 5vw 1vw 5vw;
+}
+
+.sorting-box{
+    font-size: 2vw;
 }
 
 .search-bar{
@@ -15,6 +19,19 @@
 .mat-form-field{
     font-size: 15px;
     border-color: white;
+    padding: 0px 1vw 0px 1vw;
+}
+
+.submit-button{
+    color: white;
+    background-color: #265a94;
+    margin-right: 1vw;
+}
+
+.clear-button{
+    color: white;
+    background-color: #912c2c;
+    
 }
 
 ::ng-deep .mat-focused .mat-form-field-label {
@@ -26,6 +43,14 @@
     /*change color of underline*/
     color: white !important;
 } 
+
+::ng-deep.mat-select-arrow{
+    color: white !important;
+}
+
+::ng-deep.mat-select-value{
+    color:white;
+}
 
 ::ng-deep.mat-form-field-underline {
     /*change color of underline when focused*/
@@ -51,7 +76,7 @@
 .recipe-container{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     padding: 0px;
     margin: 0px;
@@ -63,6 +88,23 @@
 
 }
 
+/*Formatting for filter chip box*/
 
+.sidenav{
+    width: 170px;
+    float: left;
+    padding-left: 5vw;
+    border-right: 2px solid #2e2e2e;
+    height: 40vw;
+}
+
+.main-content{
+   margin-left: 180px;
+}
+
+.mat-chip{
+    max-width: 100px;
+    padding-left: 20px;
+}
 
 
