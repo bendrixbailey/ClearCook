@@ -24,9 +24,9 @@ export class RecipesComponent implements OnInit {
 
   columns: number = 4;
 
-  category = new FormControl('');
-  meal = new FormControl('');
-  ingredient = new FormControl('');
+  category = new FormControl([]);
+  meal = new FormControl([]);
+  ingredient = new FormControl([]);
 
   selectedMeals = [];
   selectedIngredients =[];
@@ -61,12 +61,14 @@ export class RecipesComponent implements OnInit {
     console.log(this.recipes);
   }
 
-  filtersUpdated(){
+  public filtersUpdated(){
     this.selectedCategories = this.category.value;
     this.selectedMeals = this.meal.value;
     this.selectedIngredients = this.ingredient.value;
-    this.totalFilters.concat(this.selectedCategories).concat(this.selectedIngredients).concat(this.selectedMeals);
+    console.log(this.selectedCategories, this.selectedMeals, this.selectedIngredients)
+    this.totalFilters = this.selectedCategories.concat(this.selectedIngredients, this.selectedMeals);
     console.log(this.totalFilters);
+    this.sortedRecipes = [];
     this.recipes.forEach( (element) =>{
       if(this.totalFilters.some(v => element.categories.includes(v))){
         this.sortedRecipes.push(element);
@@ -79,6 +81,7 @@ export class RecipesComponent implements OnInit {
     this.selectedCategories = [];
     this.selectedIngredients = [];
     this.selectedMeals = [];
+    this.totalFilters = [];
     this.category.reset();
     this.meal.reset();
     this.ingredient.reset();
