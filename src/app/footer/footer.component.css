@@ -1,0 +1,33 @@
+.footer-container{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background: #347dcf;
+}
+
+.footer-list{
+    display: flex;
+    margin: 0;
+}
+
+.footer-list-item{
+    flex: 24%;
+}
+
+.footer-div-divider{
+    flex: 4%;
+}
+
+.footer-divider{
+    height: 90%;
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.footer-links{
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}

@@ -11,7 +11,8 @@
     height: 36vw;
     min-width: 120px;
     min-height: 180px;
-    max-width: 300px;
+    max-width: 250px;
+    max-height: 300px;
     border: 1px solid #616161;
 }
 
@@ -20,8 +21,17 @@ h2 {
 }
 
 p{
-    font-size: 2vw;
+    
     margin: 5px 0px;
+}
+
+@media screen and (max-width: 700px) {
+    p{
+        font-size: 2vw;
+    }
+    .save-button{
+        font-size: 2vw;
+    }
 }
 
 .recipe-card-cover{
@@ -54,7 +64,6 @@ p{
     border-color: #5cdb95;
     width: fit-content;
     line-height: 3vw;
-    font-size: 2vw;
     color: #5cdb95;
 }
 

@@ -1,9 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html {
-    background-color: #1c1c1c;
+    /* background-color: #1c1c1c; */
+    /* background-color: #01001c; */
+    /* background-color: #000324; */
+    background-image: linear-gradient(#1c1c1c, #1c1c1c, #000324);
 }
 h1{
+    color: white;
+}
+
+h2{
     color: white;
 }
 
@@ -12,12 +19,12 @@ h3{
 }
 
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 800px){
     h1{
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
     h2{
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
     h3{
         font-size: 2vw;
