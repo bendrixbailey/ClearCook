@@ -24,5 +24,13 @@
     flex: 1;
   }
 
+  .bounding-box{
+    max-width: 1000px ;
+    display: block;
+    margin: 0 auto;
+    background-color: #2a2b2b;
+    padding: 0px 1vw;
+  }
+
 
   

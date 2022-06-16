@@ -10,7 +10,7 @@
         </mat-form-field>
     </div>
     <div class="sorting-box">
-        <mat-form-field >
+        <mat-form-field style="max-width: 70px;">
             <mat-label style="color: white;">Meal</mat-label>
             <mat-select [formControl]="meal" multiple>
                 <mat-option *ngFor="let meal of meals" [value]="meal">
@@ -62,10 +62,8 @@
             </ul>
         </div>
         <div class="spacer"></div>
-        <mat-divider></mat-divider>
-        <h1 *ngIf="!recipes">No recipes match that search! Try something broader, or choose from a popular category!</h1>
+        <h2 style="padding:0px 20px 0px 20px;" *ngIf="sortedRecipes.length === 0">No recipes match your search. Please try again with broader categories or another search</h2>
     </div>
-    <app-footer></app-footer>
 </div>
 
 <!-- https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp -->
