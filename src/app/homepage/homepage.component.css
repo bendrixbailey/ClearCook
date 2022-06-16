@@ -19,16 +19,14 @@
 
 .title-text{
     margin: 3%, 0;
-    font-size: 7vw;
     text-align: center;
-    
+    font-size: 70px;
 }
 
 .title-description-text{
     margin-left: 10%;
     margin-right: 10%;
     position: absolute;
-    font-size: 2vw;
     bottom: 20%;
     text-align: center;
 }
@@ -42,6 +40,16 @@
     margin-right: 10%;
 }
 
+@media screen and (max-width: 1000px){
+    .title-text{
+        font-size: 7vw;
+    }
+
+    .title-description-text{
+        font-size: 2vw;
+    }
+}
+
 /*Ideas css classes===================*/
 
 .ideas-text{
@@ -49,7 +57,7 @@
     display: inline;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     .ideas-text{
         font-size: 3vw;
     }
