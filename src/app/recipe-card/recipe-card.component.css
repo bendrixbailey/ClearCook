@@ -5,12 +5,12 @@
     flex-direction: column;
     /* flex: 1 1 23%; */
     border-radius: 2px;
-    margin: 0 15px 25px 15px;
+    margin: 0 10px 25px 10px;
     background: #171717;
     width: 30vw;
     height: 36vw;
-    min-width: 120px;
-    min-height: 180px;
+    min-width: 100px;
+    min-height: 150px;
     max-width: 250px;
     max-height: 300px;
     border: 1px solid #616161;

@@ -101,7 +101,7 @@
 /*Formatting for filter chip box*/
 
 .sidenav{
-    width: 170px;
+    width: 20%;
     float: left;
     padding-left: 5vw;
     border-right: 1px solid #4e4e4e;
@@ -109,7 +109,7 @@
 }
 
 .main-content{
-   margin-left: 250px;
+   margin-left: 20%;
    min-height: 80vh;
 }
 
