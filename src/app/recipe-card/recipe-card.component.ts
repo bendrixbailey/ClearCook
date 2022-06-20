@@ -20,7 +20,7 @@ export class RecipeCardComponent implements OnInit {
   }
 
   openRecipe(){
-    this.router.navigate(['/recipes', {search: this.recipe.name}]);
+    this.router.navigate(['/recipes', this.recipe.name]);
   }
 
   saveRecipe(){

@@ -1,3 +1,5 @@
+import { NumberValueAccessor } from "@angular/forms";
+
 export interface Recipe {
     id: number;
     name: string;
@@ -6,6 +8,10 @@ export interface Recipe {
     categories: [];
     ingredients: Ingredient[];
     steps: string[];
+    rating: {
+        stars: number;
+        ratings: number;
+    }
 }
 
 export interface Ingredient {

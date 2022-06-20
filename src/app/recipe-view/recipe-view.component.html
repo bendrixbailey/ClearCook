@@ -1,0 +1,38 @@
+<div class="recipe-content">
+    <h1 *ngIf="recipeLoaded | async" style="font-size: 40px;">{{recipe.name}}</h1>
+    <span id="r1" class="fa fa-star"></span>
+    <span id="r2" class="fa fa-star"></span>
+    <span id="r3" class="fa fa-star"></span>
+    <span id="r4" class="fa fa-star"></span>
+    <span id="r5" class="fa fa-star"></span>
+    <span *ngIf="recipeLoaded | async" class="rating">{{recipe.rating.stars}}</span>
+    <p *ngIf="recipeLoaded | async" style="font-size: 10px;">{{recipe.rating.ratings}} ratings</p>
+    <mat-divider></mat-divider>
+    <img *ngIf="recipeLoaded | async" class="recipe-img" src={{recipe.imageLink}} alt="Image of {recipe.name}">
+    <div *ngIf="recipeLoaded | async" class="text-content">
+        <h3>Total Prep & Cook time: {{recipe.prepTime}} minutes</h3>
+        <div class="ingredients-div">
+            <h2>Ingredients needed: </h2>
+            <ol>
+                <li *ngFor="let ingredient of recipe.ingredients">
+                    <p>{{ingredient.item}} - {{ingredient.quantity}}</p>
+                </li>
+            </ol>
+        </div>
+        <mat-divider></mat-divider>
+        <h2>Cooking Instructions:</h2>
+        <ol>
+            <li *ngFor="let step of recipe.steps">
+                <p>{{formatSteps(step)}}</p>
+            </li>
+        </ol>
+        <mat-divider></mat-divider>
+        <h2>Thoughts about this recipe? Give it a rating below!</h2>
+        <div>
+            <div class="starholder">
+                <span (click)="reviewRecipe('1')" id="1" class="fa fa-star fa2"></span><span (click)="reviewRecipe('2')" id="2" class="fa fa-star fa2"></span><span (click)="reviewRecipe('3')" id="3" class="fa fa-star fa2"></span><span (click)="reviewRecipe('4')" id="4" class="fa fa-star fa2"></span><span (click)="reviewRecipe('5')" id="5" class="fa fa-star fa2"></span>
+            </div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+</div>

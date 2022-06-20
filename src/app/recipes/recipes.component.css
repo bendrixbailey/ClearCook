@@ -1,7 +1,7 @@
 /*Formatting for search box*/
 .top-box{
     color: #ffffff;
-    padding: 1vw 5vw 1vw 5vw;
+    padding: 1vw 2vw 1vw 2vw;
 }
 
 .sorting-box{
@@ -103,7 +103,7 @@
 .sidenav{
     width: 20%;
     float: left;
-    padding-left: 5vw;
+    padding-left: 2vw;
     border-right: 1px solid #4e4e4e;
     min-height: 80vh;
 }
