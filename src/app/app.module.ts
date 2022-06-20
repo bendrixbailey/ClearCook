@@ -26,6 +26,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { FooterComponent } from './footer/footer.component';
+import { RecipeViewComponent } from './recipe-view/recipe-view.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FooterComponent } from './footer/footer.component';
     FavoritesComponent,
     HomepageComponent,
     RecipeCardComponent,
-    FooterComponent
+    FooterComponent,
+    RecipeViewComponent
   ],
   imports: [
     BrowserModule,
