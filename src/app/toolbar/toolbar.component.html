@@ -5,8 +5,8 @@
         <button mat-button title="Home" class="title-button" routerLink="/home">Clear Cook</button>
         <div *ngIf="screenWidth > 800">
             <button mat-button title="Recipes" class="toolbar-button" routerLink="/recipes">Recipes</button>
-            <button mat-button title="Favorites" class="toolbar-button" routerLink="/favorites">Favorites</button>
-            <button mat-button title="My Recipes" class="toolbar-button" routerLink="/myrecipes">My Recipes</button>
+            <!-- <button mat-button title="Favorites" class="toolbar-button" routerLink="/favorites">Favorites</button>
+            <button mat-button title="My Recipes" class="toolbar-button" routerLink="/myrecipes">My Recipes</button> -->
             
             
         </div>
@@ -27,8 +27,8 @@
             </button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item title="Recipes" class="toolbar-button" routerLink="/recipes">Recipes</button>
-                <button mat-menu-item title="Favorites" class="toolbar-button" routerLink="/favorites">Favorites</button>
-                <button mat-menu-item title="My Recipes" class="toolbar-button" routerLink="/myrecipes">My Recipes</button>
+                <!-- <button mat-menu-item title="Favorites" class="toolbar-button" routerLink="/favorites">Favorites</button>
+                <button mat-menu-item title="My Recipes" class="toolbar-button" routerLink="/myrecipes">My Recipes</button> -->
                 <div mat-menu-item class="search-div">
                     <mat-form-field class="search-bar">
                         <input matInput type="text" placeholder="Search" [(ngModel)]="search" (keyup.enter)="searchRecipes(search)">
@@ -37,7 +37,7 @@
                         </button>
                     </mat-form-field>
                 </div>
-                <button mat-menu-item title="Sign In"  >Sign In</button>
+                <button mat-menu-item title="Sign In">Sign In</button>
             </mat-menu>
         </div>
         
