@@ -4,7 +4,12 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://127.0.0.1:5000"
+  baseUrl: "http://127.0.0.1:5000",
+  auth0: {
+    domain: 'dev-map2rm8b.us.auth0.com',
+    clientId: 'YzHIzTIhHV16X7vh2kTeJniyPAWy0jNk',
+    redirectUri: 'http://localhost:4200',
+  },
 };
 
 export enum ApiPaths{

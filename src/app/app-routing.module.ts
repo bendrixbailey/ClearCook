@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'recipes/:name', component: RecipeViewComponent},
   {path: 'favorites', component: FavoritesComponent},
   {path: 'myrecipes', component: MyrecipesComponent},
-  {path: 'home', component: HomepageComponent}
+  {path: '', component: HomepageComponent}
 ];
 
 @NgModule({
@@ -20,7 +20,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { 
-  constructor(router:Router){
-    router.navigate(['/home']);
-  }
+  // constructor(router:Router){
+  //   router.navigate(['/home']);
+  // }
 }
