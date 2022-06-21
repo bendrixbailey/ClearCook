@@ -29,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RecipeViewComponent } from './recipe-view/recipe-view.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment } from 'src/environments/environment';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { environment } from 'src/environments/environment';
     HomepageComponent,
     RecipeCardComponent,
     FooterComponent,
-    RecipeViewComponent
+    RecipeViewComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

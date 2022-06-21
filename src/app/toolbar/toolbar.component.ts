@@ -12,10 +12,15 @@ import { DOCUMENT } from '@angular/common';
 })
 export class ToolbarComponent implements OnInit {
 
+  user: any;
+
   constructor(private http:HttpClient, 
               public auth:AuthService, 
               private router:Router, 
-              @Inject(DOCUMENT) public document: Document) { }
+              @Inject(DOCUMENT) public document: Document) {
+    this.user = {};
+
+  }
   search = "";
   searchUrl = environment.baseUrl + ApiPaths.RecipeByName;
   public screenWidth = window.innerWidth;
@@ -30,6 +35,15 @@ export class ToolbarComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
+  }
+
+  goToProfile(){
+    this.auth.user$.subscribe((success: any) => {
+      this.user = success;
+      console.log(this.user);
+      this.router.navigate(["/profile", this.user.nickname]);
+    });
+    
   }
 
 }

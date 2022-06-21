@@ -1,0 +1,12 @@
+<div class="profile-content">
+    <div class="sidenav" *ngIf="auth.user$ | async as user">
+        <img class="profile-pic" [src]="user.picture">
+        <h3 style="margin: 5px 0px; font-size: 20px;">{{user.name}}</h3>
+        <p style="margin: 5px 0px; font-size: 17px;">{{user.email}}</p>
+        <button style="margin-top: 20px;" class="edit-profile" mat-button>Edit Profile</button>
+        <p>{{calculateUserTime(user)}}</p>
+    </div>
+    <div class="main-content">
+        <h1 class="welcome-text" *ngIf="auth.user$ | async as user"> Hello, {{user.name}}</h1>
+    </div>
+</div>
