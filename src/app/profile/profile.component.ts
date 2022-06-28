@@ -13,6 +13,8 @@ export class ProfileComponent implements OnInit {
   user: any;
   today = new Date();
 
+  test = true;
+
   pipe = new DatePipe('en-US');
 
   constructor(public auth: AuthService, private http: HttpClient) {

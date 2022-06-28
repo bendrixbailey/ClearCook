@@ -8,5 +8,6 @@
     </div>
     <div class="main-content">
         <h1 class="welcome-text" *ngIf="auth.user$ | async as user"> Hello, {{user.name}}</h1>
+        <h5 *ngIf="true">Hi im an h5 tag and if you see me everything is working</h5>
     </div>
 </div>
