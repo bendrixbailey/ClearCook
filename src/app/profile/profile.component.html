@@ -1,13 +1,13 @@
 <div class="profile-content">
     <div class="sidenav" *ngIf="auth.user$ | async as user">
         <img class="profile-pic" [src]="user.picture">
-        <h3 style="margin: 5px 0px; font-size: 20px;">{{user.name}}</h3>
-        <p style="margin: 5px 0px; font-size: 17px;">{{user.email}}</p>
+        <h3 style="margin: 5px 0px; font-size: 15px;">{{user.name}}</h3>
+        <p style="margin: 5px 0px; font-size: 12px;">{{user.email}}</p>
         <button style="margin-top: 20px;" class="edit-profile" mat-button>Edit Profile</button>
-        <p>{{calculateUserTime(user)}}</p>
+        <p>{{calculateUserTime(user)}} days</p>
     </div>
     <div class="main-content">
-        <h1 class="welcome-text" *ngIf="auth.user$ | async as user"> Hello, {{user.name}}</h1>
-        <h5 *ngIf="true">Hi im an h5 tag and if you see me everything is working</h5>
+        <h1 class="welcome-text" *ngIf="auth.user$ | async as user"> Hello, {{user.name}}!</h1>
+        <h3 *ngIf="!usernameSet">You dont have a username set up yet! Please update your profile information!</h3>
     </div>
 </div>

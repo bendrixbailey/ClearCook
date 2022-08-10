@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment';
 export class ProfileComponent implements OnInit {
   user: any;
   today = new Date();
-
+  usernameSet = false;
   test = true;
 
   pipe = new DatePipe('en-US');
@@ -87,7 +87,7 @@ export class ProfileComponent implements OnInit {
     let todaysDate = this.pipe.transform(this.today, "YYYY-MM-dd");;
     let userJoinDate = new Date(user.created_at);
     // console.log(userJoinDate)
-    return "114";
+    return 114;
   }
 
 }
