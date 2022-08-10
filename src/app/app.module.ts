@@ -27,6 +27,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { RecipeViewComponent } from './recipe-view/recipe-view.component';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment } from 'src/environments/environment';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -38,12 +41,14 @@ import { RecipeViewComponent } from './recipe-view/recipe-view.component';
     HomepageComponent,
     RecipeCardComponent,
     FooterComponent,
-    RecipeViewComponent
+    RecipeViewComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    AuthModule.forRoot(environment.auth0),
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,

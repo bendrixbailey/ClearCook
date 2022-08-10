@@ -2,12 +2,16 @@
 <mat-toolbar class="app-toolbar">
     <!-- <h1>Clear Cook</h1> -->
     <mat-toolbar-row>
-        <button mat-button title="Home" class="title-button" routerLink="/home">Clear Cook</button>
+        <button mat-button title="Home" class="title-button" routerLink="">Clear Cook</button>
         <div *ngIf="screenWidth > 800">
             <button mat-button title="Recipes" class="toolbar-button" routerLink="/recipes">Recipes</button>
             <!-- <button mat-button title="Favorites" class="toolbar-button" routerLink="/favorites">Favorites</button>
             <button mat-button title="My Recipes" class="toolbar-button" routerLink="/myrecipes">My Recipes</button> -->
-            
+            <ng-container *ngIf="auth.isAuthenticated$ | async">
+                <button mat-button (click)="goToProfile()">
+                  Profile
+                </button>
+            </ng-container>
             
         </div>
         <div *ngIf="screenWidth > 800" class="search-div">
@@ -17,9 +21,16 @@
                     <mat-icon>close</mat-icon>
                 </button>
             </mat-form-field>
-            <button mat-button title="Sign In">Sign In</button>
+            <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+                <button mat-button (click)="auth.logout({ returnTo: document.location.origin })">
+                  Log out
+                </button>
+            </ng-container>
+            <ng-template #loggedOut>
+                <button mat-button (click)="auth.loginWithRedirect()" title="Sign In">Log in</button>
+            </ng-template>
         </div>
-
+<!-- ---------------------    BELOW IS FOR THE COLLAPSIBLE BAR WHEN THE SCREEN GETS TOO SMALL--------------------------------- -->
         <span *ngIf="screenWidth <= 800" class="expander"></span>
         <div *ngIf="screenWidth <= 800">
             <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -29,6 +40,11 @@
                 <button mat-menu-item title="Recipes" class="toolbar-button" routerLink="/recipes">Recipes</button>
                 <!-- <button mat-menu-item title="Favorites" class="toolbar-button" routerLink="/favorites">Favorites</button>
                 <button mat-menu-item title="My Recipes" class="toolbar-button" routerLink="/myrecipes">My Recipes</button> -->
+                <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+                    <button mat-button (click)="goToProfile()">
+                      Profile
+                    </button>
+                </ng-container>
                 <div mat-menu-item class="search-div">
                     <mat-form-field class="search-bar">
                         <input matInput type="text" placeholder="Search" [(ngModel)]="search" (keyup.enter)="searchRecipes(search)">
@@ -37,7 +53,14 @@
                         </button>
                     </mat-form-field>
                 </div>
-                <button mat-menu-item title="Sign In">Sign In</button>
+                <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+                    <button mat-button (click)="auth.logout({ returnTo: document.location.origin })">
+                      Log out
+                    </button>
+                </ng-container>
+                <ng-template #loggedOut>
+                    <button mat-button (click)="auth.loginWithRedirect()" title="Sign In">Log in</button>
+                </ng-template>
             </mat-menu>
         </div>
         

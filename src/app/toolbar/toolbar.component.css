@@ -2,6 +2,10 @@
     font-size: smaller;
 }
 
+.mat-button{
+    font-size: medium;
+}
+
 .title-button{
     font-size: larger;
 }
@@ -34,4 +38,6 @@
     width: 100%;
     color: white;
 }
+
+
 
