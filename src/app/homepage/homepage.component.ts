@@ -41,6 +41,7 @@ export class HomepageComponent implements OnInit {
     let url = `${this.baseUrl}${ApiPaths.Home}`
     this.http.get<Recipe[]>(url).subscribe(data =>{
       this.randomRecipes = data;
+      console.log(this.randomRecipes);
     })
 
     if(this.randomRecipes.length = 0){
